@@ -20,7 +20,6 @@ def backchain_to_goal_tree(rules, hypothesis):
 	matches = [hypothesis]	
 	for rule in rules:
 		var_names =  match(rule.consequent()[0], hypothesis)
-		# print(rule.consequent()[0], hypothesis, var_names)
 		if var_names is not None:
 			temp = copy.deepcopy(rule.antecedent())
 			if isinstance(temp, list):
